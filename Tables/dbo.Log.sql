@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Log](
+	[Id]			INT					IDENTITY (1,1) NOT NULL,
+	[CreateDate]	DATETIME			CONSTRAINT [DF_Log_CreateDate]  DEFAULT (GETDATE()) NOT NULL,
+	[Value]			VARCHAR (MAX)		NULL,
+	[CalcId]		UNIQUEIDENTIFIER	NULL,
+	[CalcSeconds]	INT					NULL,
+	CONSTRAINT [PK_Log] PRIMARY KEY CLUSTERED ([Id] ASC)
+)

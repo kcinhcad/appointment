@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ScheduleCell](
+	[Id]		UNIQUEIDENTIFIER	NOT NULL,
+	[StartDate] DATETIME			NULL,
+	[EndDate]	DATETIME			NULL,
+	[State]		INT					NULL,
+	[DoctorId]	UNIQUEIDENTIFIER	NULL,
+	CONSTRAINT [PK_ScheduleCell] PRIMARY KEY CLUSTERED ([Id] ASC)
+)

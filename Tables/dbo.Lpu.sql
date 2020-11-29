@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[Lpu](
+	[Id]				UNIQUEIDENTIFIER	NOT NULL,
+	[Name]				NVARCHAR(255)		NULL,
+	[ShortName]			NVARCHAR(255)		NULL,
+	[CityId]			UNIQUEIDENTIFIER	NULL,
+	[AppointmentUrl]	NVARCHAR(255)		NULL,
+	[ShowInMainSite]	BIT					CONSTRAINT [DF_Lpu_ShowInMainSite]  DEFAULT ((1)) NOT NULL,
+	[ShowInMobile]		BIT					CONSTRAINT [DF_Lpu_ShowInMobile]  DEFAULT ((1)) NOT NULL,
+	[ShowInSocial]		BIT					CONSTRAINT [DF_Lpu_ShowInSocial]  DEFAULT ((1)) NOT NULL,
+	[ClinicUrl]			NVARCHAR(255)		NULL,
+	[OrgGroupId]		UNIQUEIDENTIFIER	NULL,
+	[Priority]			INT CONSTRAINT [DF_Lpu_Priority] DEFAULT ((0)) NOT NULL,
+	CONSTRAINT [PK_Lpu] PRIMARY KEY CLUSTERED ([Id] ASC)
+)
